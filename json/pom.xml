@@ -4,12 +4,12 @@
 
   <parent>
     <groupId>com.esri.hadoop</groupId>
-    <artifactId>spatial-framework-for-hadoop</artifactId>
-    <version>0.1.0</version>
+    <artifactId>spatial-sdk-hadoop</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <relativePath>../</relativePath>
   </parent>
 
-  <artifactId>json</artifactId>
+  <artifactId>spatial-sdk-json</artifactId>
   <name>Spatial JSON Utilities</name>
 
   <dependencies>
@@ -29,12 +29,13 @@
     </dependency>
 
     <dependency>
-      <groupId>com.esri</groupId>
-      <artifactId>geometry-api</artifactId>
+      <groupId>com.esri.geometry</groupId>
+      <artifactId>esri-geometry-api</artifactId>
     </dependency>
   </dependencies>
 
   <build>
+		<sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

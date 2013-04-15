@@ -3,13 +3,33 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.esri.hadoop</groupId>
-  <artifactId>spatial-framework-for-hadoop</artifactId>
-  <version>0.1.0</version>
+  <artifactId>spatial-sdk-hadoop</artifactId>
+  <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Spatial Framework for Hadoop</name>
   <url>http://github.com/Esri/spatial-framework-for-hadoop</url>
   <description>Enables developers and data scientists to use the Hadoop data processing system for spatial data analysis.</description>
+
+  <licenses>
+		<license>
+	  		<name>The Apache Software License, Version 2.0</name>
+	  		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	  		<distribution>repo</distribution>
+		</license>
+  </licenses>
+
+	<parent>
+  	<groupId>org.sonatype.oss</groupId>
+  	<artifactId>oss-parent</artifactId>
+  	<version>7</version>
+	</parent>
+
+	<scm>
+		<connection>scm:git:git@github.com:Esri/geometry-api-java.git</connection>
+		<developerConnection>scm:git:git@github.com:Esri/geometry-api-java.git</developerConnection>
+		<url>git@github.com:Esri/geometry-api-java.git</url>
+	</scm>
 
   <modules>
     <module>hive</module>
@@ -33,8 +53,23 @@
     <javadoc.plugin.version>2.8</javadoc.plugin.version>
   </properties>
 
+	<repositories>
+		<repository>
+			<id>org.datanucleus</id>
+			<name>datanucleus</name>
+			<url>http://www.datanucleus.org/downloads/maven2/</url>
+		</repository>
+	</repositories>
+
   <dependencyManagement>
     <dependencies>
+
+	  	<dependency>
+				<groupId>javax.jdo</groupId>
+				<artifactId>jdo2-api</artifactId>
+				<version>2.3-ec</version>
+	  	</dependency>
+
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-client</artifactId>
@@ -75,13 +110,10 @@
         <version>${jackson.version}</version>
       </dependency>
 
-      <!-- Ack: this is terrible, and should be replaced with a real dependency. -->
       <dependency>
-        <groupId>com.esri</groupId>
-        <artifactId>geometry-api</artifactId>
-        <version>1.0.0</version>
-        <scope>system</scope>
-        <systemPath>${project.basedir}/../lib/esri-geometry-api.jar</systemPath>
+        <groupId>com.esri.geometry</groupId>
+        <artifactId>esri-geometry-api</artifactId>
+        <version>1.0</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
