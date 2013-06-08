@@ -1,4 +1,4 @@
-package com.esri.json.serializer;
+package com.esri.hadoop.json.serializer;
 
 import java.io.IOException;
 

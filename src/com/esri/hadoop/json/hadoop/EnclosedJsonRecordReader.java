@@ -1,4 +1,4 @@
-package com.esri.json.hadoop;
+package com.esri.hadoop.json.hadoop;
 
 import java.io.IOException;
 import java.io.InputStream;

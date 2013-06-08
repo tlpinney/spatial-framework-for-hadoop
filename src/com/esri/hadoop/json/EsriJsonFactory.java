@@ -1,4 +1,4 @@
-package com.esri.json;
+package com.esri.hadoop.json;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,12 +15,12 @@ import org.codehaus.jackson.map.module.SimpleModule;
 
 import com.esri.core.geometry.Geometry;
 import com.esri.core.geometry.SpatialReference;
-import com.esri.json.deserializer.GeometryJsonDeserializer;
-import com.esri.json.deserializer.GeometryTypeJsonDeserializer;
-import com.esri.json.deserializer.SpatialReferenceJsonDeserializer;
-import com.esri.json.serializer.GeometryJsonSerializer;
-import com.esri.json.serializer.GeometryTypeJsonSerializer;
-import com.esri.json.serializer.SpatialReferenceJsonSerializer;
+import com.esri.hadoop.json.deserializer.GeometryJsonDeserializer;
+import com.esri.hadoop.json.deserializer.GeometryTypeJsonDeserializer;
+import com.esri.hadoop.json.deserializer.SpatialReferenceJsonDeserializer;
+import com.esri.hadoop.json.serializer.GeometryJsonSerializer;
+import com.esri.hadoop.json.serializer.GeometryTypeJsonSerializer;
+import com.esri.hadoop.json.serializer.SpatialReferenceJsonSerializer;
 
 public class EsriJsonFactory {
 

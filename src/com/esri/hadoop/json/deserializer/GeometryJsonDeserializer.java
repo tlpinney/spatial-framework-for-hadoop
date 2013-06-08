@@ -1,4 +1,4 @@
-package com.esri.json.deserializer;
+package com.esri.hadoop.json.deserializer;
 import java.io.IOException;
 
 import org.codehaus.jackson.JsonParser;
